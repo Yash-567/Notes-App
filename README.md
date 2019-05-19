@@ -1,5 +1,5 @@
 # Notes-App
-Notes App developed with Node.Js
+Notes App developed with Node.Js on Visual Studio Code
 This Notes App is capable of :
 1. Adding a Note(node app.js add --title="" --body="")
 2. Remove a Note(node app.js remove --title="")
