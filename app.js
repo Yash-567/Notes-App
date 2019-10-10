@@ -7,12 +7,12 @@ yargs.command({
     desc: 'add a command',
     builder:{
         title:{
-            desc: 'Note Title',
+            desc: 'Title',
             demandOption: true,
             type: 'string'
         },
         body: {
-            desc: 'Note Body',
+            desc: 'Body',
             demandOption: true ,
             type: 'string'
         }
@@ -37,17 +37,17 @@ yargs.command({
 })
 yargs.command({
     command: 'list',
-    describe: 'list a command',
+    describe: 'list command',
     handler() {
         notes.listNotes()
     }
 })
 yargs.command({
     command: 'read',
-    describe: 'read a command',
+    describe: 'read command',
     builder:{
         title:{
-            desc:'note title',
+            desc:'Title',
             type:'string',
             demandOption:true
         }
