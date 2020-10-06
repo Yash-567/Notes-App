@@ -8,4 +8,5 @@ This Notes App is capable of :
 3. Listing a Note(node app.js list)
 4. Reading a Note(node app.js read --title="")
 5. Updating a Note(node app.js update --title="" --newTitle="")
-   Note: Install the npm modules with the help of command "npm install" for the app to run smoothly
+
+Note: Install the npm modules with the help of command "npm install" for the app to run smoothly
