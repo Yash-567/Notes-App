@@ -56,4 +56,11 @@ yargs.command({
         notes.readNote(yargs.argv.title)
     }
 })
+yargs.command({
+    command: 'export',
+    describe: 'export notes as html',
+    handler() {
+        console.log(notes.exportHtml())
+    }
+})
 yargs.parse()
