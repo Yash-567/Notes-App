@@ -59,9 +59,30 @@ const readNote=(title)=>{
         console.log(chalk.bgRed('No Note Found'))
     }
 }
+const exportHtml =()=>{
+    try {
+        const dataBuffer = fs.readFileSync('export.html')
+        const dataHTML = dataBuffer.toString()
+        const lines = dataHTML.split('\n')
+        let notes = ''
+        loadNotes().forEach(note => {
+            notes += '<tr>' +
+                '<td>' + note.title + '</td>' +
+                '<td>' + note.body + '</td>' +
+                '</tr>'
+        })
+        lines[25] = notes
+        const result = lines.join('\n')
+        fs.writeFileSync('notes.html', result)
+        return 'Exported to notes.html'
+    }catch(e){
+        return 'Failed to export'
+    }
+}
 module.exports = {
     addNote :addNote,
     removeNote :removeNote,
     listNotes :listNotes,
-    readNote :readNote
+    readNote :readNote,
+    exportHtml: exportHtml
 }
